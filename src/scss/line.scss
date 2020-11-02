@@ -1,0 +1,39 @@
+.mo-line {
+  position: relative;
+  z-index: 0;
+
+  &.red:before {
+    background-color: #f00;
+  }
+  &.primary:before {
+    background-color: $color-theme;
+  }
+  &.error:before {
+    background-color: $color-error;
+  }
+  &.warning:before {
+    background-color: $color-warning;
+  }
+  &.success:before {
+    background-color: $color-success;
+  }
+  &.link:before {
+    background-color: $color-link;
+  }
+}
+
+.line-top:before {
+  @include hairline("top", $color-border);
+}
+
+.line-bottom:before {
+  @include hairline("bottom", $color-border);
+}
+
+.line-left:before {
+  @include hairline("left", $color-border);
+}
+
+.line-right:before {
+  @include hairline("right", $color-border);
+}

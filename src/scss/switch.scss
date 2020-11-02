@@ -1,0 +1,42 @@
+$switch-R: 26px;
+.mo-switch {
+  width: 50px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #d9d9d9;
+  position: relative;
+  transition: background-color 0.1s;
+  right: $padding;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: $switch-R;
+    width: $switch-R;
+    border-radius: 60%;
+    background-color: #fff;
+    transition: transform 0.1s;
+  }
+
+  &.is-active {
+    background-color: $color-theme;
+    &:before {
+      transform: translate3d(20px, 0, 0);
+    }
+  }
+
+  input {
+    display: none;
+  }
+}
+
+.disabled {
+  .mo-switch {
+    background-color: #eee;
+    &.is-active {
+      background-color: $color-theme-disabled;
+    }
+  }
+}

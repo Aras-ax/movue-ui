@@ -1,0 +1,100 @@
+$wheel-item-height: 50px;
+
+.mo-pick-mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.mo-picker {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background: #fff;
+  border-radius: 10px 10px 0 0;
+
+  .mo-picker-head {
+    display: flex;
+    height: 60px;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .mo-picker-button {
+    text-align: center;
+    font-size: 16px;
+    padding: $padding;
+  }
+
+  .mo-picker-cancel {
+    text-align: left;
+    color: rgba(0, 0, 0, 0.45);
+  }
+
+  .mo-picker-submit {
+    text-align: right;
+    color: $color-theme;
+  }
+
+  .mo-picker-title {
+    flex: 1;
+    color: #333;
+    text-align: center;
+  }
+
+  .mo-picker-panel {
+    position: relative;
+    height: $wheel-item-height * 5;
+    padding: 0 $padding;
+    box-sizing: border-box;
+  }
+  .mo-picker-top,
+  .mo-picker-bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: $wheel-item-height * 2;
+    background: #fff;
+    transform: translateZ(0);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .mo-picker-top {
+    top: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5));
+  }
+
+  .mo-picker-bottom {
+    bottom: 0;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5));
+  }
+
+  .mo-picker-wheel-wrapper {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+  }
+  .mo-picker-wheel {
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .mo-picker-wheel-scroll {
+    margin-top: $wheel-item-height * 2;
+  }
+
+  .mo-picker-wheel-item {
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+  }
+}

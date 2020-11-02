@@ -1,0 +1,58 @@
+.mo-loading {
+  padding: $padding - 6px;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate3d(-50%, -50%, 0);
+  border-radius: 2px;
+  text-align: center;
+  color: #fff;
+  max-width: 240px;
+  min-width: 40px;
+  overflow: hidden;
+
+  .mo-loading-icon {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+
+  &.mo-loading-max {
+    border-radius: 4px;
+    min-width: 80px;
+
+    .mo-max-wrapper {
+      padding: 6px;
+    }
+
+    .mo-loading-tips {
+      padding-top: 0;
+    }
+
+    .mo-loading-icon {
+      font-size: 28px;
+    }
+  }
+
+  .spinner svg {
+    width: 28px;
+    height: 28px;
+    stroke: #fff;
+    fill: #fff;
+  }
+
+  .mo-loading-tips {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 6px;
+  }
+}
+.mo-loading-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+}

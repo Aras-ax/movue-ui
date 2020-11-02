@@ -1,0 +1,57 @@
+$headbar-z-index: 1;
+
+.head-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: $headbar-z-index;
+  background-color: #fff;
+  box-sizing: border-box;
+  height: $headbar-height;
+  display: flex;
+  padding: 0 $headbar-height;
+  align-items: center;
+  justify-content: center;
+
+  .head-btn {
+    position: absolute;
+    top: 0;
+    height: 100%;
+
+    &.left {
+      left: 0;
+      right: auto;
+
+      .button {
+        padding-left: $padding;
+      }
+    }
+
+    &.right {
+      left: auto;
+      right: 0;
+      .button {
+        padding-right: $padding;
+        text-align: right;
+      }
+    }
+  }
+
+  .title {
+    font-size: 18px;
+    color: $color-title;
+  }
+
+  .button {
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    display: block;
+    height: 100%;
+    min-width: $headbar-height;
+    text-align: left;
+    font-size: 18px;
+    color: $color-title;
+  }
+}

@@ -1,0 +1,163 @@
+@mixin thin-border-before($color, $radius) {
+  position: relative;
+  &:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 1px solid $color;
+    // border-left: 1px solid $color;
+    border-radius: $radius;
+    transform-origin: 0 0;
+    z-index: 0;
+    box-sizing: border-box;
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+      height: 200%;
+      width: 200%;
+      transform: scale(0.5);
+      border-radius: ($radius * 2);
+    }
+  }
+}
+
+@mixin thin-border-after($color, $radius) {
+  position: relative;
+  &:before {
+    border-bottom: none;
+    border-right: none;
+  }
+
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-bottom: 1px solid $color;
+    border-right: 1px solid $color;
+    border-radius: $radius;
+    transform-origin: 0 0;
+    z-index: 0;
+    box-sizing: border-box;
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+      height: 200%;
+      width: 200%;
+      transform: scale(0.5);
+      border-radius: ($radius * 2);
+    }
+  }
+}
+
+@mixin hairline($position: bottom, $color: $color-border) {
+  content: "";
+  position: absolute;
+  background-color: $color;
+  display: block;
+  @if $position == left {
+    left: 0;
+    top: 0;
+    bottom: auto;
+    right: auto;
+    height: 100%;
+    width: 1px;
+    transform-origin: 0 50%;
+    -webkit-transform-origin: 0 50%;
+    transform: scaleX(0.5);
+    -webkit-transform: scaleX(0.5);
+  } @else if $position == right {
+    left: auto;
+    top: 0;
+    bottom: auto;
+    right: 0;
+    height: 100%;
+    width: 1px;
+    transform-origin: 100% 50%;
+    -webkit-transform-origin: 100% 50%;
+    transform: scaleX(0.5);
+    -webkit-transform: scaleX(0.5);
+  } @else if $position == top {
+    left: 0;
+    top: 0;
+    bottom: auto;
+    right: auto;
+    height: 1px;
+    width: 100%;
+    transform-origin: 0% 0%;
+    -webkit-transform-origin: 0% 0%;
+    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+  } @else {
+    // $position == bottom
+    left: 0;
+    top: atuo;
+    bottom: 0;
+    right: auto;
+    height: 1px;
+    width: 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform-origin: 0% 100%;
+    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+  }
+}
+
+// transition
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+  transition: $transition;
+}
+@mixin transition-delay($transition-delay) {
+  -webkit-transition-delay: $transition-delay;
+  transition-delay: $transition-delay;
+}
+@mixin transition-duration($transition-duration) {
+  -webkit-transition-duration: $transition-duration;
+  transition-duration: $transition-duration;
+}
+@mixin transition-duration($transition-duration) {
+  -webkit-transition-duration: $transition-duration;
+  transition-duration: $transition-duration;
+}
+
+@mixin transition-timing-function($transition-timing) {
+  -webkit-transition-timing-function: $transition-timing;
+  transition-timing-function: $transition-timing;
+}
+
+@mixin transition-property($property) {
+  -webkit-transition-property: $property;
+  transition-property: $property;
+}
+
+// transform
+@mixin rotate($degrees) {
+  @include transform(rotate($degrees));
+}
+@mixin scale($ratio) {
+  @include transform(scale($ratio));
+}
+@mixin translate($x, $y) {
+  @include transform(translate($x, $y));
+}
+@mixin skew($x, $y) {
+  @include transform(skew($x, $y));
+  -webkit-backface-visibility: hidden;
+}
+@mixin translate3d($x, $y, $z) {
+  @include transform(translate3d($x, $y, $z));
+}
+@mixin translateZ($z) {
+  @include transform(translateZ($z));
+}
+@mixin transform($val) {
+  -webkit-transform: $val;
+  transform: $val;
+}
+
+@mixin transform-origin($left, $top) {
+  -webkit-transform-origin: $left $top;
+  transform-origin: $left $top;
+}

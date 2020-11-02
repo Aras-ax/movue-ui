@@ -1,0 +1,11 @@
+.mo-scroll {
+  overflow: hidden;
+
+  &.scrollX {
+    white-space: nowrap;
+
+    .mo-scroll-content {
+      display: inline-block;
+    }
+  }
+}

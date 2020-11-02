@@ -1,0 +1,81 @@
+@import "mixins";
+
+/* 各色值 */
+// 主题色
+$color-theme: #ff642b;
+$color-theme-disabled: #ffe2d0;
+$color-theme-hover: #ff8755;
+$color-theme-active: #da481a;
+// 错误，失败
+$color-error: #ff2f2b;
+$color-error-disabled: #ffd7cf;
+$color-error-hover: #ff5d55;
+$color-error-active: #d91b1e;
+// 提醒，警告，强调
+$color-warning: #ff992b;
+$color-warning-disabled: #ffefd0;
+$color-warning-hover: #ffb254;
+$color-warning-active: #d9771a;
+// 成功，完成
+$color-success: #26e029;
+$color-success-disabled: #d5ffcf;
+$color-success-hover: #52ed4e;
+$color-success-active: #18ba1f;
+// 连接，说明
+$color-link: #2b92ff;
+$color-link-disabled: #cfedff;
+$color-link-hover: #55acff;
+$color-link-active: #1970d9;
+// 标题文字
+$color-title: #262626;
+// 主要内容
+$color-main: #595959;
+// 次级，描述
+$color-description: #8c8c8c;
+// 禁用文字
+$color-disabled: #bfbfbf;
+// 边框
+$color-border: #d9d9d9;
+// 分割线
+$color-line: #f0f0f0;
+// 背景色
+$color-background: #f5f5f5;
+// mask遮罩
+$color-mask: rgba(0, 0, 0, 0.7);
+
+$color-form-value: rgba(0, 0, 0, 0.85);
+$color-form-label: #333;
+$color-form-disabled: #bfbfbf;
+// 边距
+$padding: 16px;
+
+/* Page */
+$default-page-bg: #f5f5f5;
+
+/* Header */
+$headbar-height: 48px;
+$form-row-height: 50px;
+/* Thin Border */
+$default-border-color: #ddd;
+
+$ios-transition-duration: 500ms !default;
+$ios-transition-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1) !default;
+
+$android-transition-duration: 200ms !default;
+$android-transition-timing-function: cubic-bezier(0.4, 0.6, 0.2, 1) !default;
+
+/* font */
+$font-stack: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+// 主要内容
+$font-size: 13px;
+// 错误提示信息
+$font-size-error: 12px;
+// 标题文章，toast文字
+$font-size-title: 14px;
+// 二级标题
+$font-size-h2: 16px;
+$font-form-size: 16px;
+// 一级标题
+$font-size-h1: 18px;
+// 结果页标题，对话框标题
+$font-size-max: 20px;

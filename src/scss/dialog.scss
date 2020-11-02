@@ -1,0 +1,112 @@
+.mo-dialog-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  .mo-dialog {
+    width: 340px;
+    border-radius: 8px;
+    max-height: 80%;
+    max-width: 80%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    background-color: #fff;
+    overflow: hidden;
+  }
+
+  .mo-dialog-header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: $color-title;
+  }
+
+  .mo-dialog-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 12px;
+    font-size: 14px;
+    color: #8c8c8c;
+    background-color: transparent;
+    border: 0;
+  }
+
+  .mo-dialog-title {
+    text-align: center;
+    font-size: 20px;
+    overflow: hidden;
+  }
+
+  .mo-dialog-content {
+    padding: 0 $padding 20px;
+    color: #565656;
+    text-align: left;
+  }
+
+  .mo-dialog-footer {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    &:after {
+      @include hairline(top);
+    }
+
+    .mo-dialog-btn {
+      flex: 1;
+      text-align: center;
+      margin: 0;
+      position: relative;
+      // &:not(:last-child) {
+      &::after {
+        @include hairline(right);
+      }
+      // }
+    }
+  }
+
+  &.mo-message {
+    .mo-dialog-header {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+}
+
+@keyframes dialog-fade-in {
+  0% {
+    transform: translate(0, -20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes dialog-fade-out {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(0, -20px);
+    opacity: 0;
+  }
+}
+
+.mo-dialog-fade-enter-active {
+  animation: dialog-fade-in 0.3s;
+}
+
+.mo-dialog-fade-leave-active {
+  animation: dialog-fade-out 0.3s;
+}

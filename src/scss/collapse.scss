@@ -1,0 +1,40 @@
+.mo-collapse {
+  .mo-collapse-head {
+    display: flex;
+    align-items: center;
+    padding: 0 $padding;
+    height: $form-row-height;
+  }
+  .mo-coolapse-title {
+    flex: 1;
+    color: $color-form-label;
+    font-size: $font-form-size;
+  }
+
+  .mo-icon-up {
+    margin-right: $padding;
+    font-size: 14px;
+    color: #ccc;
+    transition: transform $ios-transition-duration $ios-transition-timing-function;
+  }
+  .mo-collapse-content {
+    // transform: translate3d(-1px, 0, 0);
+    padding: $padding;
+    font-size: $font-form-size;
+    line-height: 24px;
+    color: #595959;
+  }
+
+  &.is-active {
+    .mo-icon-up {
+      transform: rotate3d(0, 0, 1, 180deg);
+    }
+  }
+
+  &.disabled {
+    .mo-collapse-content,
+    .mo-coolapse-title {
+      color: $color-form-disabled;
+    }
+  }
+}

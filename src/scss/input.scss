@@ -1,0 +1,55 @@
+$line-height: 24px;
+
+.mo-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  .mo-input-content {
+    display: flex;
+    align-items: center;
+  }
+  .mo-input {
+    height: 100%;
+    position: relative;
+    font-size: $font-form-size;
+    color: $color-form-value;
+    line-height: $line-height;
+    border: 0;
+    outline: none;
+    width: 50%;
+    flex: 1;
+    box-sizing: border-box;
+    background-color: transparent;
+  }
+
+  .mo-input-icons {
+    width: 22px;
+    text-align: right;
+    color: #ccc;
+
+    position: absolute;
+    right: $padding - 2px;
+    top: 0;
+    height: 100%;
+    font-size: 0;
+
+    &.double {
+      width: 44px;
+    }
+
+    .input-icon {
+      font-size: 18px;
+      padding: 0 2px;
+      height: 100%;
+      line-height: $form-row-height;
+      display: inline-block;
+    }
+  }
+
+  &.no-title {
+    .mo-form-value {
+      width: 100%;
+    }
+  }
+}
