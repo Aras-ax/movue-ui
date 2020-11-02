@@ -12,10 +12,10 @@ module.exports = {
     path: path.join(root, "dist/"), // 出口目录
     publicPath: process.env.NODE_ENV === "publish" ? "/dist" : "/",
     chunkFilename: "[name].js?[chunkhash:5]",
-    filename: "mo-ui.js",
+    filename: "movue-ui.js",
     libraryTarget: "commonjs2",
     libraryExport: "default",
-    library: "mo-ui"
+    library: "movue-ui"
   },
   resolve: {
     alias: {

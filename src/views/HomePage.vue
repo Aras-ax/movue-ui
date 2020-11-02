@@ -1,6 +1,6 @@
 <template>
   <mo-page :hasTitle="false">
-    <h1>mo-ui</h1>
+    <h1>movue-ui</h1>
     <h2>移动端组件库</h2>
     <div id="nav">
       <section v-for="nav in navs" :key="nav.title">

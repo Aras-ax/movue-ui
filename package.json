@@ -1,7 +1,7 @@
 {
-  "name": "mo-ui",
+  "name": "movue-ui",
   "version": "1.0.0",
-  "main": "dist/mo-ui.js",
+  "main": "dist/movue-ui.js",
   "scripts": {
     "publish": "webpack --env.NODE_ENV=publish --color --config build/webpack.publish.js --mode production",
     "component": "webpack --env.NODE_ENV=publish --color --config build/webpack.component.js --mode production",
@@ -45,17 +45,17 @@
     "vue",
     "移动端组件库",
     "UI组件库",
-    "mo-ui",
+    "movue-ui",
     "H5",
     "开箱即用"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/moshang-xc/mo-ui.git"
+    "url": "git+https://github.com/moshang-xc/movue-ui.git"
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/moshang-xc/mo-ui/issues"
+    "url": "https://github.com/moshang-xc/movue-ui/issues"
   },
-  "homepage": "https://github.com/moshang-xc/mo-ui#readme"
+  "homepage": "https://github.com/moshang-xc/movue-ui#readme"
 }

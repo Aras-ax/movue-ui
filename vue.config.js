@@ -9,7 +9,7 @@ module.exports = {
   pages: {
     index: {
       entry: "src/main.js",
-      title: "mo-ui"
+      title: "movue-ui"
     }
   },
   outputDir: "docs",

@@ -1,18 +1,18 @@
-# mo-ui
+# movue-ui
 
-移动端 UI 组件库。[在线示例](https://moshang-xc.github.io/mo-ui/)
+移动端 UI 组件库。[在线示例](https://moshang-xc.github.io/movue-ui/)
 
 
 ## 使用
 
 ### 安装
 ```
-npm i mo-ui -S
+npm i movue-ui -S
 ```
 
 ### 完全引用
 ```
-import MoUi from 'mo-ui';
+import MoUi from 'movue-ui';
 
 Vue.use(MoUi);
 ```
@@ -26,7 +26,7 @@ plugins: [
   [
     "component",
     {
-      libraryName: "mo-ui", //插件名称
+      libraryName: "movue-ui", //插件名称
       styleLibraryName: "css", //插件样式目录
       libDir: "dist/lib" //插件库路径
     }
@@ -35,7 +35,7 @@ plugins: [
 ```
 3. `import`需要使用的组件
 ```js
-import { Base, Datepicker, Input } from "mo-ui";
+import { Base, Datepicker, Input } from "movue-ui";
 
 Vue.use(Base);
 Vue.use(Datepicker);
@@ -102,7 +102,7 @@ Vue.use(Input);
 
 ### 按需引入
 ```js
-import { Text } from "mo-ui";
+import { Text } from "movue-ui";
 Vue.use(Text);
 ```
 
@@ -197,7 +197,7 @@ Vue.use(Text);
 
 ### 按需引入
 ```js
-import { Button } from "mo-ui";
+import { Button } from "movue-ui";
 Vue.use(Button);
 ```
 
@@ -232,7 +232,7 @@ Vue.use(Button);
 ### 按需引入
 
 ```js
-import { Line } from "mo-ui";
+import { Line } from "movue-ui";
 Vue.use(Line);
 ```
 
@@ -276,7 +276,7 @@ Vue.use(Line);
 ### 按需引入
 
 ```js
-import { Input } from "mo-ui";
+import { Input } from "movue-ui";
 Vue.use(Input);
 ```
 
@@ -338,7 +338,7 @@ export default {
 ### 按需引入
 
 ```js
-import { Radio } from "mo-ui";
+import { Radio } from "movue-ui";
 Vue.use(Radio);
 ```
 
@@ -407,7 +407,7 @@ Vue.use(Radio);
 ### 按需引入
 
 ```js
-import { Checkbox } from "mo-ui";
+import { Checkbox } from "movue-ui";
 Vue.use(Checkbox);
 ```
 
@@ -472,7 +472,7 @@ Vue.use(Checkbox);
 ### 按需引入
 
 ```js
-import { Select } from "mo-ui";
+import { Select } from "movue-ui";
 Vue.use(Select);
 ```
 
@@ -510,7 +510,7 @@ Vue.use(Select);
 ### 按需引入
 
 ```js
-import { Switch } from "mo-ui";
+import { Switch } from "movue-ui";
 Vue.use(Switch);
 ```
 
@@ -551,7 +551,7 @@ Vue.use(Switch);
 ### 按需引入
 
 ```js
-import { Range } from "mo-ui";
+import { Range } from "movue-ui";
 Vue.use(Range);
 ```
 
@@ -604,7 +604,7 @@ Vue.use(Range);
 `mo-collapse`默认依赖`mo-collapse-transition`组件，需要同时引入`mo-collapse-transition`组件。
 
 ```js
-import {Transition, Collapse } from "mo-ui";
+import {Transition, Collapse } from "movue-ui";
 Vue.use(Transition);
 Vue.use(Collapse);
 ```
@@ -678,7 +678,7 @@ export default {
 `mo-dropdown`组件继承自`mo-picker`，需要同时引入`mo-picker`组件。
 
 ```js
-import { Picker, Dropdown } from "mo-ui";
+import { Picker, Dropdown } from "movue-ui";
 Vue.use(Picker);
 Vue.use(Dropdown);
 ```
@@ -735,7 +735,7 @@ export default {
 ### 按需引入
 
 ```js
-import { Datepicker } from "mo-ui";
+import { Datepicker } from "movue-ui";
 Vue.use(Datepicker);
 ```
 
@@ -849,7 +849,7 @@ export default {
 ### 按需引入
 
 ```js
-import { Picker } from "mo-ui";
+import { Picker } from "movue-ui";
 Vue.use(Picker);
 ```
 
@@ -897,7 +897,7 @@ ios回弹效果滚动容器，对`Better-Scroll`封装了一层，减少配置�
 ### 按需引入
 
 ```js
-import { Scroll } from "mo-ui";
+import { Scroll } from "movue-ui";
 Vue.use(Scroll);
 ```
 
@@ -939,7 +939,7 @@ Vue.use(Scroll);
 ### 按需引入
 
 ```js
-import { Tab } from "mo-ui";
+import { Tab } from "movue-ui";
 Vue.use(Tab);
 ```
 
@@ -1106,7 +1106,7 @@ setTimeout(() => {
 ### 按需引入
 
 ```js
-import { Toast } from "mo-ui";
+import { Toast } from "movue-ui";
 Vue.use(Toast);
 Vue.prototype.$loading = Toast.loading;
 Vue.prototype.$toast = Toast.toast;
@@ -1209,7 +1209,7 @@ this.$confirm("确定要删除嘛？")
 `mo-dialog`中的按钮使用的是`mo-button`组件，故需同时引入。
 
 ```js
-import { Button, Dialog } from "mo-ui";
+import { Button, Dialog } from "movue-ui";
 Vue.use(Button);
 Vue.use(Dialog);
 ```
@@ -1275,7 +1275,7 @@ confirm对话内容，可以是html代码段。非必填。
 `message`中的按钮使用的是`mo-button`组件，故需同时引入。
 
 ```js
-import { Button, Message } from "mo-ui";
+import { Button, Message } from "movue-ui";
 Vue.use(Button);
 Vue.use(Message);
 Vue.prototype.$alert = Message.alert;
